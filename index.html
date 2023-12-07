@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- permet au code de savoir qu'il peut s'adapter a toutes tailles d'ecran -->
+    <title>swim</title>  <!--titre de la page-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logoTitre">
+                <h1>
+                    SWIMMING POOL 
+                    <div id="ancre">
+
+                    </div>
+                </h1>
+                <div>
+                    <img class="mainlogo" src="logoswim.jpg" alt="image voilier sur ocean">
+                </div>
+            </div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="Navigation/Services.html">Services</a></li>
+                            <li><a href="Navigation/Produits.html">Produits</a></li>
+                            <li><a href="Navigation/Contacts.html">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+        </div> 
+        <div class="menu">
+            <!-- Utilisation d'une checkbox -->
+            <input type="checkbox" id="hamburger">
+            <!-- Label de la checkbox -->
+            <label id="hamburger-logo" for="hamburger">☰</label>
+            <!-- Le reste du menu -->
+            <nav class="burgerLinks">
+              <a href="#">Accueil</a>
+              <a href="Navigation/Services.html">Services</a>
+              <a href="Navigation/Produits.html">Produits</a>
+              <a href="Navigation/Contacts.html">Contacts</a>
+            </nav>
+        </div>
+
+    </header>  
+    <section class="pics">
+            <div class="imagesPlainesChemin">
+                    <img src="image/image section1.jpg" alt="imagePlaine"> 
+                    <img src="image/image section2.jpg" alt="imageChemin">
+            </div>
+            <div class="textePlainesChemin">
+                    <p>plaine</p>
+                    <p>Chemin</p>
+            </div class="button1">
+                <button>
+                    <a href="Navigation/Services.html">Services</a>
+                </button>
+                <button>
+                    <a href="Navigation/Produits.html">Produits</a>
+                </button>
+                <button>
+                    <a href="Navigation/Contacts.html">Contacts</a>
+                </button>
+            <div>
+    </section>
+<section class="sectionMargin">
+        <div class="container">
+            <div class="box">Boite 1</div>
+            <div class="box">Boite 2</div>
+            <div class="box">Boite 3</div>
+            <div class="box">Boite 4</div>
+            <div class="box">Boite 5</div>
+            <div class="box">Boite 6</div>
+            <div class="box">Boite 7</div>
+            <div class="box">Boite 8</div>  
+        </div>
+</section>
+<section class="sectionMargin">
+    <div class="containerGrid">
+        <div class="box boxgrid1">Boite 1</div>
+        <div class="box boxgrid2">Boite 2</div>
+        <div class="box boxgrid3">Boite 3</div>
+        <div class="box boxgrid4">Boite 4</div>
+        <div class="box boxgrid5">Boite 5</div>
+        <div class="box boxgrid6">Boite 6</div>
+        <div class="box boxgrid7">Boite 7</div>
+        <div class="box boxgrid8">Boite 8</div>  
+    </div>
+</section>
+<section class="sectionMargin">
+    <div class="cG2">
+        <div class="bg1 box">Boite 1</div>
+        <div class="bg2 box">Boite 2</div>
+        <div class="bg3 box">Boite 3</div>
+        <div class="bg4 box">Boite 4</div>
+        <div class="bg5 box">Boite 5</div>
+        <div class="bg6 box">Boite 6</div>
+        <div class="bg7 box">Boite 7</div>
+        <div class="bg8 box">Boite 8</div>  
+    </div>
+</section>
+<div>
+    <a href="#ancre"> aller sur une autre ancre</a>
+    <a href="Links/services.html#servicePage">ancre sur autre page</a>
+</div>
+<section class="tableContainer">
+    <table>
+        <caption class="tableFirstName">
+            Tableau de comparaison des prenoms et leur conséquences
+        </caption>
+        <tr>
+            <th></th>
+            <th>Nom</th>
+            <th>Questions</th>
+            <th>Reponses</th>
+            
+        </tr>
+        <tr>
+            <th>Nom</th>
+            <td>Jean-Jacques</td>
+            <td>Jean-Jean</td>
+            <td>Jean-kevin</td></tr>
+        <tr>
+            <th>Questions</th>
+            <td>Pourquoi</td>
+            <td>Pour qui</td>
+            <td>Comment</td>
+        </tr>
+        <tr>
+            <th>Reponses</th>
+            <td>Because</td>
+            <td>Because2</td>
+            <td>Because3</td>
+        </tr>
+        <tr>
+            <th>Commentaires</th>
+            <td>note1</td>
+            <td>note2</td>
+            <td>note3</td>
+        </tr>
+    </table>
+</section>
+<section class="formContainer">
+    <form method="get" action="formFirst">
+    
+        <p class="contactContainer">
+            <fieldset>
+                <label>Votre prenom</label>: <input type="text" name="prenom" id="prenom" size="50" maxlength="20" placeholder="Inscrivez votre prénom..." value="">
+                <label>Votre nom</label>: <input type="text" name="nom" id="nom" size="50" maxlength="20" placeholder="Inscrivez votre nom..." value="">
+                <label>email</label>: <input type="email" name="email" id="email" size="50" maxlength="20" placeholder="Inscrivez votre email..." value="">
+            </fieldset>
+        </p>
+        <p> 
+            <fieldset class="alimentspreferes">
+                <legend>Cochez vos aliments préférés</legend>
+                <label for="Aliments préférés"></label>: <input type="checkbox" name="concombre" id="concombre">concombre
+                <label for="Aliments préférés"></label>: <input type="checkbox" name="patate" id="patate">patate
+                <label for="Aliments préférés"></label>: <input type="checkbox" name="salade" id="salade">salade
+                <label for="Aliments préférés"></label>: <input type="checkbox" name="potiron" id="potiron">potiron
+                <label for="Aliments préférés"></label>: <input type="checkbox" name="steak" id="steak">steak
+                <label for="Aliments préférés"></label>: <input type="checkbox" name="poisson" id="poisson" checked>poisson
+                <label for="Aliments préférés"></label>: <input type="checkbox" name="moule" id="moule">moule
+            </fieldset>
+        </p>
+        <p>
+            <fieldset class="ageType">
+                <label>0 a 25 ans</label>: <input type="radio" name="age1" id="age1" size="50" value="0 a 25 ans">
+                <label>26 a 40 ans</label>: <input type="radio" name="age2" id="age2" size="50" value="26 a 40 ans">
+                <label>41 a 59ans</label>: <input type="radio" name="age3" id="age3" size="50"  value="41 a 59 ans">
+                <label>Plus de 60 ans</label>: <input type="radio" name="age4" id="age4" size="50"  value=" plus de 60 ans">
+            </fieldset>
+        </p>
+        <P class="comments">
+            <textarea name="commentaires" id="commentaires" cols="30" rows="10" placeholder="inscrivez quelques mots..." maxlength="60"></textarea>
+        </P>
+        <p class="country">
+            <label for="pays">de quel pays venez vous?
+                <select name="pays" id="pays">
+                    <option value="sénégal">Sénégal</option>
+                    <option value="Brésil">Brésil</option>
+                    <option value="France">France</option>
+                    <option value="Italie">Italie</option>
+                </select>
+                    
+            </label>
+        </p>
+        <div>
+            <fieldset class="validationForm">
+                <p> Best Formulaire Ever </p>
+                <input type="submit" value="Envoyer le BFE"> 
+            </fieldset>
+        </div>
+    </form>
+
+    <!-- -------------------------- formulaire --------------------------------------------- -->
+    <!-- creer un label d'un formulaire (label) et lui donner les propriétés avec input (type text pour et name pour la variable qui renverra le contenu au back-en , ce name est ciblé par l'id qui reprend le meme contenu que le name:prenom)
+    name="prenom" va chercher l'info qu'il y a dans l'id pour l'envoyer au back-end. name peut s'ecrire firstname (ou nimporte quoi) du moment que le contenu de l'id est le meme: ici id="prenom"
+    on peut y mettre des options (style) dans le input du html: siez, maxlength, value, placeholer
+    ajout text area (grande zone de texte: svt pour commentaires) avec nom, name, label 
+liste non exhaustive des balises input: mail, url, tel, number, range, date, time, week, month, datetime-local, search, checkbox (case a cocher)
+
+balise radio: choix multiple: indiquer la tranche d'age dans laquelle vous vous situez
+-->
+    
+
+      
+</section>
+<main>
+    <aside>
+    </aside>
+</main>
+    <footer>
+    </footer>
+</body>
+</html>

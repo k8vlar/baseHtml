@@ -1,0 +1,512 @@
+* { /*definit le style global (selecteur universel)*/
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box; /*indique que l'on va inclure les marges internes et bordure dans la taille des parents*/
+    font-family: 10px 'Nova Square', sans-serif; 
+}
+a:hover{
+    color: rgb(255, 153, 0);
+    border: 10px rgba(248, 29, 13, 0.534) outset;
+    background-color: rgb(224, 73, 3);
+}
+a:visited{
+    color: darkgreen;
+}
+a:focus{
+    color: rgba(128, 255, 0, 0.432);
+    background-color: rgba(255, 145, 0, 0.623);
+}
+.logoTitre{
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+h1 {
+    color: rgb(175, 18, 13);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 3 px;
+}
+.header{
+    display: flex;
+    
+    justify-content: space-between; 
+    background-color: rgba(255, 145, 0, 0.336);
+}
+/*-------------Menu burger --------------*/
+.menu {
+    /* Pour que le menu reste en place quand on scroll vers le bas ou haut*/
+    position: fixed;
+    display: none;
+    /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
+   width: 0;
+  }
+  
+  #hamburger {
+    /* Pour que la checkbox ne s'affiche pas */
+    display: none;
+  }
+  
+  #hamburger-logo {
+    /* Pour que le curseur soit un pointeur */
+    cursor: pointer;
+    background: rgb(148, 4, 4);
+    width: 200px;
+    display: block;
+    /* pour que la cible soit encrée par l'action donnée: ici le clic du checkbox: donc suit l'action donnée */
+    color: white;
+    border-radius: 25px;
+    /* Pour que le menu hamburger s'affiche toujours */
+    text-align: right;
+    /* Pour que le menu hamburger soit "rangé" par défaut */
+    transform: translateX(-168px);
+    padding: 10px;
+  }
+  
+  .burgerLinks {
+    display: flex;
+    flex-direction: column;
+    background: rgb(231, 136, 136);
+    overflow: hidden;
+    border-radius: 25px;
+    width: 200px;
+    /* Pour que les liens soient "rangés" par défaut */
+    transform: translateX(-200px);
+  }
+  
+#hamburger-logo,
+.burgerLinks{
+    /* Pour qu'il y ait une animation */
+    transition: 0.7s;
+  }
+  
+  /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
+  #hamburger:checked ~ #hamburger-logo,
+  #hamburger:checked ~ .burgerLinks{
+    /* Changement de la position pour afficher les menus */
+    transform: translate(0);
+    /* fait revenir le menu a son etat initial */
+  }
+  
+.burgerLinks a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+.burgerLinks a:hover {
+    background: #444444ad;
+  }
+
+  /* ------------------------------------------FIN BURGER MENU--------------------------------------------------- */
+nav ul li{
+    display: inline; 
+    margin-right: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav ul li a{
+    color: rgb(4, 56, 169); 
+    text-decoration: none;
+    font-size: 40px; 
+}
+.mainlogo{
+    display: flex;
+    justify-content: flex-start;
+    width: 150px;
+}
+
+.imagesPlainesChemin{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px, black;
+}
+.textePlainesChemin{
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(114, 123, 250);
+    border: 1px rgb(43, 226, 58);
+    background-color: rgba(255, 230, 0, 0.555);
+    font-size: 13px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+.pics{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 1px rgb(0, 38, 255) double;
+    box-shadow: 4px 4px 15px rgba(170, 5, 5, 0.5);
+    background: linear-gradient(90deg, rgba(255, 38, 0, 0.295),rgba(255, 0, 221, 0.295));
+}
+.button1{
+    border: 10px rgb(96, 13, 173) double;
+    display: flex;
+    justify-content: center;
+    max-width: 50px;
+}
+.sectionMargin{
+    margin-top: 10px;
+}
+
+.container{
+    display: grid; /* initialise le grid*/
+    grid-template-columns: 0.2fr 0.2fr 0.2fr; /*créé 3 colonne avec les différentes tailles en largeurs de ces colonnes*/
+    grid-template-rows: 100px 150px 200px; /*créé 3 rangées avec différentes tailles en hauteurs de ces rangées*/
+    gap: 10px;  
+}
+.box{
+    border: 3px black inset;
+    text-align: center;
+    background-color: rgb(128, 255, 0);
+    border-radius: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+
+/* -------------------------------------GRID-------------------GRID-------------------------------GRID-------------------------- */
+table{
+    border: 5px black solid;
+}
+.tableContainer{
+    border: 5px rgba(0, 0, 0, 0.671) solid;
+    margin: 45px;
+    padding: 45px;
+
+}
+.tableFirstName{
+    font-family: 10px black Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.containerGrid{
+    display: grid;
+    grid-template-columns: 0.2fr 0.2fr 0.2fr;
+    grid-template-rows: 200px 200px 200px 200px 200px;
+    gap: 10px;
+/* 3 colonnes créés pour 4 lignes dans les placements via grid-column et grid-row unité soit fr soit px */
+/* 5 niveaux de rows pour créer 5 hauteurs via grid-template-rows */
+/* gap pour faire séparation entre cases ... margin et paddin ne donne pas les memes resultats */
+
+}
+.boxgrid1{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    /* 3 colonnes resulte de 4 niveaux dans colonne */
+}
+.boxgrid2{
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+.boxgrid3{
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+}
+.boxgrid4{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+.boxgrid5{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+.boxgrid6{
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+}
+.boxgrid7{
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
+.boxgrid8{
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
+}
+
+
+.cG2{
+    display: grid;
+    grid-template-columns: 0.2fr 0.2fr 0.2fr;
+    grid-template-rows: 200px 200px 200px 200px 200px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.bg1{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+.bg2{
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+.bg3{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+.bg4{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+.bg5{
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+}
+.bg6{
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+}
+.bg7{
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
+.bg8{
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
+}
+/* -----------------------------------FIN GRID-------------------------------------------------------- */
+
+
+
+
+/* ----------------Les positions----------------------------------------- */
+/* absolute:permet de placer l'element n'importe ou sur la page
+relatif: permet de decaler l'element par rapport a sa position initiale
+l'élément a alors un point d'origine (coin en haut a gauche)  */
+
+    /*------------------------------ ENCRE ----------------------------
+    lien permettant de passer via lien d'un endroit a un autre d'une page, et/ou site: par exemple dene pas scroller par: souvent en bas de page pr revenir en haut*/
+
+
+    /* -----------------------------------ANCRE----------------------------------------------------------
+    pour haut de page: créer a l'endroit d'arrivée (en haut) div id="creer nom"> 
+    puis en bas de page: <a href= #nom créer">mot visible sur le lien 
+
+    pour autre page: dans l'autre page: créer id=servicePage"> mot :mot visible
+     puis créer dans index.html: a l'endroit choisi: a ref="Links/service.html/#servicePage"> mot du lien */
+
+/* -------------------------------------------------------TABLEAU-------------------------------------------------------------
+ */
+/* indiquer toutes les lgines avec tr*4 puis definir td avec td: border:1px solid blk -----puis manque un titre a creer avec th (en colonnes ou rangées)
+dans le css , mettre border-collapse dans class parent pour coller les bordures entre elles 
+puis titre/legende avec fct "caption" "titre legende du tableau" */
+
+td,th{
+    border: 1px solid black;
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+}
+table{
+   border-collapse: collapse;
+   margin: auto;
+   color: rgb(255, 0, 191);
+   background-color: rgba(0, 0, 255, 0.308);
+}
+
+
+/* -----------------------------------------------------FORMULAIRE-------------------------------------------------------- */
+/* créer section puis form action "...." method "post" ou "get"
+get: renvoi toutes les infos dans l'url en haut (adresse site)
+post: passe les parametres en back end. pour pas qu'on voit les infos persos. 100% en post */
+
+/* balise form puis input="text" name "prenom" id"prenom"  puis effacer (c'etait pour nous montrer comment ca marche)
+creer un label pour mettre contenu
+<label>Votre prenom</label>: <input type="text" name="prenom">
+pas d'id car cible l'element que l'on veut vraiement
+name prenom est une variable
+*/ 
+
+/* fielset permet de regrouper plusieurs labels et input sur une meme ligne ou box */
+.alimentspreferes{
+    background-color: blue;
+}
+fieldset{
+    background-color: brown;
+}
+
+
+/* --------------------------MEdiA QUERY (mode responsive)------------------------------------------------------------------------------------
+display block : bloque certains elements 
+display none: fait disparaitre l'élément / pour mobile certains elements ne sont pas utiles 
+mediaquery (max-width: 800px =format tablette)
+display none*/
+/* noté toujours de la meme facon et en dernier dans son code (pour rassembler les choses ) 
+@media screen and (max-width: 800px) {insérer vos propriétés CSS ici avec vos sélecteurs}*/
+@media screen and (max-width: 800px){
+    .menu{
+        display: block;
+    } 
+    .header{
+        display: none}
+
+    .imagesPlainesChemin{
+        width: 799px; }
+
+    .button1{
+        border: 5px rgb(96, 13, 173) double;
+        display: flex;
+        justify-content: center;
+        max-width: 25px;
+    }
+   
+    .container{
+        width: 800px;
+        justify-content: center;
+    }
+    .containerGrid{
+        width: 800px;
+        justify-content: center;
+    }
+    .cG2{
+        width: 800px;
+        justify-content: center;
+    }
+    .tableFirstName{
+        width: 700px;
+        justify-content: center;
+    }
+    .tableContainer{
+        width: 800px;
+        justify-content: center;
+    }
+    .formContainer{
+        width: 800px;
+        justify-content: center;
+        display: flex;
+        margin-left: 45px;
+        border: 1px black solid;
+        padding: 5px;
+        border-radius: 20px;
+    }
+    .contactContainer{
+        width: 790px;
+        justify-content: center;
+        display: flex;
+        border: 1px rgba(0, 0, 0, 0) solid;
+        border-radius: 20px;
+    }
+    .alimentspreferes{
+        width: 790px;
+        justify-content: center;
+        display: flex;
+    }
+    .ageType{
+        width: 790px;
+        justify-content: center;
+        display: flex;
+    }
+    .comments{
+        width: 790px;
+        justify-content: center;
+        display: flex;
+    }
+    .validationForm{
+        width: 790px;
+        justify-content: center;
+        display: flex;
+    }
+    .country{
+        width: 790px;
+        justify-content: center;
+        display: flex;
+    }
+    }
+
+    /* Pour que le menu reste en place quand on scroll vers le bas ou haut*/
+    /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
+/* max: si la taille de l'ecran est de 800px ou moins
+min: si la taille de l'ecran est supérieur a  */
+/* mieux fct max car aujourdhui on travaille en mobile first : points de ruptures arbitraires:
+tablette: 800px
+mobile: 425px
+desktop: 
+une ligne html est indispensable: 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- permet au code de savoir qu'il peut s'adapter a toutes tailles d'ecran -->
+*/
+/* --------------------------------pour smartphone---------------------------------------------- */
+@media screen and (max-width: 425px){
+    .menu{
+        display: block;
+    } 
+    .header{
+        display: none}
+
+    .imagesPlainesChemin{
+        width: 399px; }
+
+    .button1{
+        border: 1px rgb(96, 13, 173) double;
+        display: flex;
+        justify-content: center;
+        max-width: 13px;
+    }
+    .container{
+        width: 400px;
+        display: grid;
+        justify-content: center;
+    }
+    .containerGrid{
+        display: grid;
+        width: 400px;
+        justify-content: center;
+    }
+    .cG2{
+        width: 400px;
+        display: grid;
+        justify-content: center;
+    }
+    .tableFirstName{
+        width: 350px;
+        display: grid;
+        justify-content: center;
+    }
+    .tableContainer{
+        width: 400px;
+        display: grid;
+        justify-content: center;
+        border: 1px black solid;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .formContainer{
+        width: 400px;
+        justify-content: center;
+        display: flex;
+       
+        
+    }
+    .contactContainer{
+        width: 395px;
+        justify-content: center;
+        display: flex;
+        border: 1px rgba(0, 0, 0, 0) solid;
+        border-radius: 10px;
+    }
+    .alimentspreferes{
+        width: 395px;
+        justify-content: center;
+        display: flex;
+    }
+    .ageType{
+        width: 395px;
+        justify-content: center;
+        display: flex;
+    }
+    .comments{
+        width: 395px;
+        justify-content: center;
+        display: flex;
+    }
+    .validationForm{
+        width: 395px;
+        justify-content: center;
+        display: flex;
+    }
+    .country{
+        width: 395px;
+        justify-content: center;
+        display: flex;
+    }
+    }
